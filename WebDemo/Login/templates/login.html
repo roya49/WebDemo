@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+
+    <title>Login page</title>
+
+    <!-- Meta-Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all">
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+
+    <section class="main">
+        <div class="logo text-center">
+            <h1><a>Login page</a></h1>
+        </div>
+        <div class="content-w3ls text-center">
+            <img src="../static/img/admin.png" alt="" class="img-responsive">
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="wthree-field">
+                    <input name="username" id="text1" type="text" value="" placeholder="Username" required>
+                </div>
+                <div class="wthree-field">
+                    <input name="password" id="myInput" type="Password" placeholder="Password">
+                </div>
+                <div class="wthree-field">
+                    <button type="submit" class="btn">Login In</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+<!-- //Body -->
+
+</html>

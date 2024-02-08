@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +15,7 @@
 
 
     <!-- style CSS -->
-    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all">
 </head>
 <!-- //Head -->
 
@@ -26,7 +28,7 @@
             <h1><a>Login page</a></h1>
         </div>
         <div class="content-w3ls text-center">
-            <img src="../static/img/admin.png" alt="" class="img-responsive">
+            <img src="{% static "img/admin.png" %}" alt="" class="img-responsive">
             <form action="#" method="post">
                 {% csrf_token %}
                 <div class="wthree-field">

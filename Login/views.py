@@ -5,8 +5,8 @@ from django.views.generic import View
 # Create your views here.
 def login(request):
     # 用url访问是get请求,用提交按钮是post请求
-    # if request.method == "GET":  # 登录get请求
-    #     return render(request, "login.html")
+    if request.method == "GET":  # 登录get请求
+        return render(request, "login.html")
     print(request.POST)  # 如果是POST请求，获取用户提交的数据
     username = request.POST.get("username")
     password = request.POST.get("password")

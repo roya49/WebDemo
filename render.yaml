@@ -14,7 +14,7 @@ services:
     branch: main
     autoDeploy: true
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: "gunicorn WebDemo.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:

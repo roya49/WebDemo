@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/icon.css">
     <link rel="stylesheet" href="../static/css/style-user.css" type="text/css" media="all">
     <script src="../static/js/index.js"></script>
@@ -55,28 +56,28 @@
     </div>
 
     <div class="content-right">
+        {% block content %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td bgcolor="black">job number</td>
+                    <td>name</td>
+                    <td>role</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stuff in stuffs%}
+                <tr>
+                    <td>{{ stuff.job_number }}</td>
+                    <td>{{ stuff.username }}</td>
+                    <td>{{ stuff.role }}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+        {% endblock %}
         <div class="right-item">
-            <form action="" method="post" class="form-style">
-            {% csrf_token %}
-            <div class="wthree-field">
-                <button name="signIn" class="button gray" onclick="signIn()">Sign In</button>
-            </div>
 
-            <div class="wthree-field">
-                <button name="signOut" class="button gray" onclick="signOut()">Sign Out</button>
-            </div>
-        </form>
-            {% if messages %}
-            <script>
-                {% for msg in messages %}
-                    alert('{{ msg.message }}');
-                {% endfor %}
-            </script>
-            {% endif %}
-        </div>
-
-        <div class="right-item">
-            <span class="alert"><h3>{{ alert }}</h3></span>
         </div>
     </div>
 

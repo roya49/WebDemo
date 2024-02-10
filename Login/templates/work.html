@@ -54,33 +54,21 @@
 
     </div>
 
-    <div class="content-right">
-        <div class="right-item">
-            <form action="" method="post" class="form-style">
-            {% csrf_token %}
-            <div class="wthree-field">
-                <button name="signIn" class="button gray" onclick="signIn()">Sign In</button>
-            </div>
+        <div class="content-right">
+            <div class="right-item">
+                <div class="wthree-field">
+                    <button  class="button gray" onclick="add()">Add Stuff</button>
+                </div>
 
-            <div class="wthree-field">
-                <button name="signOut" class="button gray" onclick="signOut()">Sign Out</button>
+                <div class="wthree-field">
+                    <button  class="button gray" onclick="stuffList()">Stuffs</button>
+                </div>
             </div>
-        </form>
-            {% if messages %}
-            <script>
-                {% for msg in messages %}
-                    alert('{{ msg.message }}');
-                {% endfor %}
-            </script>
-            {% endif %}
-        </div>
-
-        <div class="right-item">
-            <span class="alert"><h3>{{ alert }}</h3></span>
-        </div>
     </div>
 
     </div>
+
+
 
 </body>
 </html>

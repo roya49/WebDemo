@@ -16,6 +16,49 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-right {
+    width: 80%;
+    height: 700px;
+    float: left;
+}
+
+.right-item{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-left {
+    width: 20%;
+    height: 820px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+}
+
+.alert{
+    color: #1b1b1b;
+}
+
+.form-style{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: flex;
+}
+
 .wrap {
     background: center no-repeat;
     background-size: cover;
@@ -39,6 +82,29 @@ body {
 
 .nav:hover {
     width: 280px;
+}
+
+.button{
+width: 140px;
+line-height: 38px;
+text-align: center;
+font-weight: bold;
+color: #fff;
+text-shadow:1px 1px 1px #333;
+border-radius: 5px;
+margin:15px 20px 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.button.gray{
+color: #8c96a0;
+text-shadow:1px 1px 1px #fff;
+border:1px solid #dce1e6;
+box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: linear-gradient(top,#f2f3f7,#e4e8ec);
 }
 
 .btn {
@@ -263,3 +329,11 @@ body {
 .menu-item>label>span {
     flex: 1;
 }
+
+.wthree-field {
+    margin-bottom:14px;
+    margin-left: 15px;
+
+}
+
+

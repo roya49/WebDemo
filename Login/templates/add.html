@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/icon.css">
+    <link rel="stylesheet" href="../static/css/style-user.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all"/>
+    <script src="../static/js/index.js"></script>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="content-left">
+        <!--按钮-->
+        <div class="btn">
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+        </div>
+        <!--头像-->
+        <div class="icon">
+            <div class="icon-img"><img src="../static/img/admin.png" alt="" /></div>
+            <div class="icon-con">
+                <span>Good Day</span>
+                <span><h3>{{ name }}</h3></span>
+            </div>
+        </div>
+
+        <div class="line"></div>
+            <div class="menu-item">
+                <label>
+                    <i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+                    <span onclick="home()">Home</span>
+                </label>
+            </div>
+
+            <div class="menu-item">
+                <label>
+                    <i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+                    <span onclick="work()">Work</span>
+                </label>
+            </div>
+
+            <div class="menu-item">
+                <label>
+                    <i class="menu-item-icon iconfont icon-a-08-shezhi"></i>
+                    <span onclick="logout()">Logout</span>
+                </label>
+            </div>
+
+    </div>
+
+        <div class="content-right">
+            <div class="right-item">
+                <form action="" method="post">
+                {% csrf_token %}
+                  <div class="form-group">
+                      <div class="form-group">
+                        <label for="number">Job Number</label>
+                        <input type="text" class="form-control" name="number" id="number" placeholder="Job Number">
+                      </div>
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                  </div>
+                 <div class="form-group">
+                    <select class="custom-select" name="role" required>
+                      <option value="">""</option>
+                      <option value="1">admin</option>
+                      <option value="2">stuff</option>
+                    </select>
+                 </div>
+                    <button type="submit" class="btn btn-primary">Primary</button>
+                </form>
+                {% if messages %}
+                <script>
+                    {% for msg in messages %}
+                        alert('{{ msg.message }}');
+                    {% endfor %}
+                </script>
+                {% endif %}
+
+<!--                <form action="#" method="post">-->
+<!--                    {% csrf_token %}-->
+<!--                    <div class="div"><input name="job number" type="text" placeholder="Job Number" required></div>-->
+<!--                    <div class="div"><input name="name" type="text" placeholder="Name"></div>-->
+<!--                    <div class="div"><input name="password" type="Password" placeholder="Password"></div>-->
+<!--                    <div class="div">-->
+<!--                        <select>-->
+<!--                            <option value="1">admin</option>-->
+<!--                            <option value="2">stuff</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="wthree-field">-->
+<!--                        <button type="submit" class="btn">Add</button>-->
+<!--                    </div>-->
+<!--                </form>-->
+            </div>
+
+    </div>
+
+    </div>
+
+</body>
+</html>
